@@ -1,6 +1,7 @@
 import Span from './Span';
 import Util from '../utils/Util';
 import MathUtils from './MathUtils';
+import ColorSpan from './ColorSpan';
 
 export default class ArraySpan extends Span {
 
@@ -29,6 +30,8 @@ export default class ArraySpan extends Span {
         if (!arr) return null;
 
         if (arr instanceof ArraySpan)
+            return arr;
+        if (arr instanceof ColorSpan)
             return arr;
         else
             return new ArraySpan(arr);

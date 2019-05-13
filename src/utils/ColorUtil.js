@@ -39,6 +39,10 @@ export default {
         return `rgb(${rbg.r}, ${rbg.g}, ${rbg.b})`;
     },
 
+    rbgToHexString( rgb ){
+        return "#"+((rgb.r & 0xFF) << 16 | (rgb.g & 0xFF) << 8 | (rgb.b & 0xFF)).toString(16);
+    },
+
     getHex16FromParticle(p) {
         return Number(p.transform.rgb.r) * 65536 + Number(p.transform.rgb.g) * 256 + Number(p.transform.rgb.b);
     }

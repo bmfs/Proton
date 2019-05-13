@@ -10,6 +10,7 @@ import Polar2D from './math/Polar2D';
 import Mat3 from './math/Mat3';
 import Span from './math/Span';
 import ArraySpan from './math/ArraySpan';
+import ColorSpan from './math/ColorSpan';
 import Rectangle from './math/Rectangle';
 import ease from './math/ease';
 
@@ -68,6 +69,7 @@ Proton.MathUtils = MathUtils;
 Proton.Vector2D = Proton.Vector = Vector2D;
 Proton.Polar2D = Proton.Polar = Polar2D;
 Proton.ArraySpan = ArraySpan;
+Proton.ColorSpan = ColorSpan;
 Proton.Rectangle = Rectangle;
 Proton.Rate = Rate;
 Proton.ease = ease;

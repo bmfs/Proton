@@ -11,6 +11,7 @@ export default class PixiRenderer extends BaseRenderer {
         this.setColor = false;
         this.pool.create = (body, particle) => this.createBody(body, particle);
         this.name = 'PixiRenderer';
+        this.blendMode = 0;
     }
 
     onProtonUpdate() { }
@@ -34,6 +35,7 @@ export default class PixiRenderer extends BaseRenderer {
     onParticleUpdate(particle) {
         this.transform(particle, particle.body);
         if (this.setColor) particle.body.tint = ColorUtil.getHex16FromParticle(particle);
+        if (this.blendMode != 0) particle.body.blendMode = this.blendMode;
     }
 
     /**
